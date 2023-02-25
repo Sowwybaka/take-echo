@@ -6,7 +6,7 @@ function Createquote() {
     const quote = useRef();
     const submitQuote = async () => {
         await fetch(`https://apex.oracle.com/pls/apex/sowmith_workspace/quote/post?name=${name.current.value}&quote=${quote.current.value}`, { method: "POST" })
-        navigate("/")
+        navigate("/take-echo")
     }
 
 

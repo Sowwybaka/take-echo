@@ -10,7 +10,7 @@ function App() {
     <>
     <Navbar />
     <Routes>
-      <Route path = "/" element = {<Home />}/>
+      <Route path = "/take-echo" element = {<Home />}/>
       <Route path = "/Create" element = {<Createquote />}/> 
     </Routes>
     </>

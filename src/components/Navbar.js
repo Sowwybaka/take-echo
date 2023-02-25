@@ -12,7 +12,7 @@ function Navbar() {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <Link class="nav-link active" aria-current="page" to="/">Quotes</Link>
+                            <Link class="nav-link active" aria-current="page" to="/take-echo">Quotes</Link>
                             <Link class="nav-link" to="/Create">Create</Link>
                         </div>
                     </div>

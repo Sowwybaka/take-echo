@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Quote from './Quote';
 
-function Home() {
+function Home(props) {
     const [quotes, setquotes] = useState([])
     const getQuotes = async () => {
         console.log("working")
@@ -16,7 +16,8 @@ function Home() {
     }, [])
     return (
         <>
-            <div className="container">
+        <div className={`container-fluid bg-${props.theme} bg-opacity-75 `} style={{minHeight:"95vh"}}>
+            <div className={`container `}>
 
                 <div className="row py-3">
                     <div className="col"><h1>Quotes!</h1></div>
@@ -24,10 +25,11 @@ function Home() {
                 </div>
                 <div className="row">
                     {quotes.map((element, index) => {
-                        return <Quote quote={element.quote} name={element.name} likes={element.likes} />
+                        return <Quote theme = {props.theme} quote={element.quote} name={element.name} likes={element.likes} />
                         
                     })}
                 </div>
+            </div>
             </div>
         </>
     )

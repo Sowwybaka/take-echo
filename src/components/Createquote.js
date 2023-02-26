@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
-function Createquote() {
+function Createquote(props) {
     const navigate = useNavigate();
     const name = useRef();
     const quote = useRef();
@@ -12,8 +12,9 @@ function Createquote() {
 
     return (
         <>
-            <div className="container my-3">
-                <div className="alert alert-warning alert-dismissible fade show" role="alert">
+        <div className={`container-fluid bg-${props.theme} bg-opacity-75 `} style={{minHeight:"95vh"}}>
+            <div className="container py-3 ">
+                <div className="alert alert-dark alert-dismissible fade show" role="alert">
                     <strong>Warning</strong> Use appropriate language
                     <button
                         type="button"
@@ -48,6 +49,7 @@ function Createquote() {
                     <label htmlFor="floatingTextarea">Quote</label>
                 </div>
                 <button onClick={submitQuote} className="btn btn-primary my-3">submit</button>
+            </div>
             </div>
 
         </>
